@@ -1,0 +1,38 @@
+{
+  "applications": ["appGW", "appSql1"],
+  "changelogDate": "20220323125912",
+  "clientRootFolder": "appSql1",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "a",
+  "fields": [
+    {
+      "fieldName": "uid",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "entAAAcod",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "entAAAdsc",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "appSql1",
+  "name": "A",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "b",
+      "otherEntityRelationshipName": "entAAAuid",
+      "relationshipName": "uid",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}

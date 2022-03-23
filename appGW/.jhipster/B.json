@@ -1,0 +1,40 @@
+{
+  "applications": ["appGW", "appSql1"],
+  "changelogDate": "20220323130112",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "b",
+  "fields": [
+    {
+      "fieldName": "uid",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "entAAAuid",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "entBBBcod",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "entBBBdsc",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "B",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "a",
+      "otherEntityRelationshipName": "uid",
+      "relationshipName": "entAAAuid",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

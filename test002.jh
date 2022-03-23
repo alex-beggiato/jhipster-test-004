@@ -1,0 +1,82 @@
+
+application {
+  config {
+    baseName appGW,
+    applicationType gateway,
+    packageName com.app.gateway,
+    authenticationType jwt,
+    prodDatabaseType mariadb,
+    clientFramework angularX,
+    serverPort 8080
+  }
+  entities A, B, C, D, E
+}
+
+application {
+  config {
+    baseName appSql1,
+    applicationType microservice,
+    packageName com.app.sql1,
+    authenticationType jwt,
+    prodDatabaseType mariadb,
+    clientFramework angularX,
+    serverPort 8181
+  }
+  entities A, B
+}
+
+application {
+  config {
+    baseName appSql2,
+    applicationType microservice,
+    packageName com.app.sql2,
+    authenticationType jwt,
+    prodDatabaseType mariadb,
+   clientFramework angularX,
+    serverPort 8282
+  }
+  entities C, E
+}
+
+entity A {
+uid UUID,
+entAAAcod String,
+entAAAdsc String
+}
+
+entity B {
+uid UUID
+entAAAuid Long,
+entBBBcod String,
+entBBBdsc String
+}
+
+entity C {
+uid UUID,
+entCCCcod String,
+entCCCdsc String
+}
+
+entity D {
+uid UUID,
+entDDDcod String,
+entDDDdsc String
+}
+
+entity E {
+uid UUID
+entCCCuid Long,
+entEEEcod String,
+entEEEdsc String
+}
+
+relationship OneToMany {
+  A{uid} to B{entAAAuid}
+}
+
+relationship OneToMany {
+  C{uid} to E{entCCCuid}
+}
+
+
+    

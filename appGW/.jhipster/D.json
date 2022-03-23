@@ -1,0 +1,29 @@
+{
+  "applications": ["appGW"],
+  "changelogDate": "20220323130212",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "d",
+  "fields": [
+    {
+      "fieldName": "uid",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "entDDDcod",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "entDDDdsc",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "D",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

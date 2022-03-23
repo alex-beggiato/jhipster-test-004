@@ -1,0 +1,50 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="b">
+      <h2 data-cy="bDetailsHeading"><span jhiTranslate="appGwApp.b.detail.title">B</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ b.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="appGwApp.b.uid">Uid</span></dt>
+        <dd>
+          <span>{{ b.uid }}</span>
+        </dd>
+        <dt><span jhiTranslate="appGwApp.b.entAAAuid">Ent AA Auid</span></dt>
+        <dd>
+          <span>{{ b.entAAAuid }}</span>
+        </dd>
+        <dt><span jhiTranslate="appGwApp.b.entBBBcod">Ent BB Bcod</span></dt>
+        <dd>
+          <span>{{ b.entBBBcod }}</span>
+        </dd>
+        <dt><span jhiTranslate="appGwApp.b.entBBBdsc">Ent BB Bdsc</span></dt>
+        <dd>
+          <span>{{ b.entBBBdsc }}</span>
+        </dd>
+        <dt><span jhiTranslate="appGwApp.b.entAAAuid">Ent AA Auid</span></dt>
+        <dd>
+          <div *ngIf="b.entAAAuid">
+            <a [routerLink]="['/a', b.entAAAuid?.id, 'view']">{{ b.entAAAuid?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/b', b.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

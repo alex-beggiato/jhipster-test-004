@@ -1,0 +1,36 @@
+{
+  "applications": ["appGW", "appSql2"],
+  "changelogDate": "20220323125912",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "c",
+  "fields": [
+    {
+      "fieldName": "uid",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "entCCCcod",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "entCCCdsc",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "C",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "e",
+      "otherEntityRelationshipName": "entCCCuid",
+      "relationshipName": "uid",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}
